@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700,800&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Concert+One&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+.custom-box{
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 50px 40px;
+    border-radius: 10px;
+}
+
+.start-box{
+    display: flex;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(66, 61, 61);
+    box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.5);
+}
+.start-img{
+    animation: fadeInOut 2s linear infinite;
+}
+@keyframes fadeInOut{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+.btn{
+    border: 2px solid gray;
+    padding: 8px 18px;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.start-btn{
+    background-color: #321746;
+    color: #fff;
+    transition:all .2s ease;
+    animation: moveRight .5s linear;
+}
+.start-btn:hover{
+    opacity: 0.4;
+}
+@keyframes moveRight{
+    0%{
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+.game-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    background-image: url("img/background.jpg");
+    background-size: contain;
+    min-height: 500px;
+    color: #fff;
+    position: relative;
+}
+.game-box .lifeTimer-box{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+.game-box .lifeTimer-box .life-line{
+    border: 1px solid gold;
+    color: gold;
+    padding: 5px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all .2s;
+    text-transform: capitalize;
+}
+.game-box .lifeTimer-box .life-line:hover{
+    color: #000;
+    background-color: gold;
+}
+.game-box .lifeTimer-box .timer{
+    margin-top: 10px;
+    width: 70px;
+    height: 70px;
+    line-height: 60px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 800;
+    border-radius: 50%;
+    border: 2px solid green;
+}
+.game-box .life-display-box{
+    width: 200px;
+    background-color: #000;
+    color: #fff;
+    margin-bottom: 20px;
+}
+.game-box .life-display-box .ask-box{
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    /* display: none; */
+}
+.game-box .life-display-box .ask-box .optionAu{
+    width:30px;
+    height: 80px;
+    border: 1px solid gold;
+    line-height: 80px;
+    text-align: center;
+    position: relative;
+    color: #fff;
+}
+.game-box .life-display-box .ask-box .optionAu:not(:last-child){
+    margin-right: 3px;
+}
+.game-box .life-display-box .ask-box .optionAu .a{
+    width: 100%;
+    height: 70%;
+    background-color: gold;
+    opacity: 0.5;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+}
+.game-box .life-display-box .ask-box .optionAu .b{
+    width: 100%;
+    height: 10%;
+    background-color: gold;
+    opacity: 0.5;
+    position: absolute;
+    bottom: 0;
+}
+.game-box .life-display-box .ask-box .optionAu .c{
+    width: 100%;
+    height: 8%;
+    background-color: gold;
+    opacity: 0.5;
+    position: absolute;
+    bottom: 0;
+}
+.game-box .life-display-box .ask-box .optionAu .d{
+    width: 100%;
+    height: 12%;
+    background-color: gold;
+    opacity: 0.5;
+    position: absolute;
+    bottom: 0;
+}
+.game-box .life-display-box .call-box{
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px 0;
+    display: none;
+}
+.game-box .life-display-box .call-box .call{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.game-box .life-display-box .call-box .call img{
+    width:50px;
+    height: 50px;
+}
+.game-box .life-display-box .call-box .call .loading-dots > div{
+    width: 8px;
+    height: 8px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    animation: load 1.5s ease-in-out infinite both;
+}
+.game-box .life-display-box .call-box .call .loading-dots .dot1{
+    animation-delay: -0.30s;
+}
+.game-box .life-display-box .call-box .call .loading-dots .dot1{
+    animation-delay: -0.15s;
+}
+.game-box .life-display-box .call-box .call .loading-dots .dot1{
+    animation-delay: -0.30s;
+}
+@keyframes load{
+    0%, 80%, 100%{
+        transform: scale(0);
+    }
+    40%{
+        transform: scale(1);
+    }
+}
+.game-box .question-help{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 0px;
+    height: 100%;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    padding-top: 20px;
+    background-color: #000;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    overflow-x: hidden;
+    transition: .5s;
+}
+.game-box .question-help.show{
+    width: 250px;
+}
+.game-box .question-help .closebtn {
+    font-size: 30px;
+    text-decoration: none;
+    color: #fff;
+    margin-left: 10px;
+  }
+.game-box .question-help .help{
+    display: flex;
+    justify-content: center;
+}
+.game-box .question-help > div{
+    margin-right: 10px;
+}
+.fify50,
+.callAFriend,
+.askTheAudience{
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    background-color: #000;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fify50{
+    background-image: url("img/fifty50.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.fify50::after{
+    content: "";
+    background: url("img/cancel.png");
+    background-size: 100% 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 50px; 
+    height: 50px; 
+}
+.callAFriend::after{
+    content: "";
+    background: url("img/cancel.png");
+    background-size: 100% 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 50px; 
+    height: 50px; 
+}
+.askTheAudience::after{
+    content: "";
+    background: url("img/cancel.png");
+    background-size: 100% 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 50px; 
+    height: 50px; 
+}
+.callAFriend{
+    background-image: url("img/phone.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.askTheAudience{
+    background-image: url("img/ask.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.game-box .question-help .prices{
+    align-self: center;
+}
+.game-box .question-help .prices ul{
+    list-style: none;
+    font-weight: 400;
+    font-size: 20px;
+}
+.game-box .question-help .prices ul li{
+    color: gold;
+}
+.game-box .question-help .prices ul li:nth-child(1),
+.game-box .question-help .prices ul li:nth-child(5),
+.game-box .question-help .prices ul li:nth-child(11){
+    color: #fff;
+}
+.question-box {
+    background-color: #000;
+    width: 80%;
+    text-align: center;
+    padding: 14px 10px;
+    border: 2px solid #3689e7;
+    border-radius: 30px;
+}
+
+.game-box .options{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 80%;
+    font-weight: 400;
+}
+
+.game-box .options .option{
+
+        background-color: #000;
+        flex-basis: calc(50% - 20px);
+        max-width: calc(50% - 20px);
+        margin-top: 5px;
+        padding: 14px 5px;
+        font-size: 16px;
+        text-transform: capitalize;
+        font-weight: 400;
+        color: #fff;
+        border: 2px solid #3689e7;
+        border-radius: 30px;
+        cursor: pointer;
+}
+.game-box .options .option span{
+    color: gold;
+}
