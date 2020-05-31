@@ -1,0 +1,184 @@
+{
+    "easy": [
+        {
+            "question": "Which is the country with the biggest population in Europe",
+            "options": ["France", "China", "Russia", "India"],
+            "answer": 2
+        },
+        {
+            "question": "2*6/3+5-2 = ?",
+            "options": ["7", "8", "9", "6"],
+            "answer": 0
+        },
+        {
+            "question": "What day is Christmas",
+            "options": ["24 Dec", "25 Dec", "26 Dec", "1st Jan"],
+            "answer": 1
+        },
+        {
+            "question": "“Crazy in Love” was the first solo No. 1 for which singer",
+            "options": ["Beyonce", "Rihanna", "Ciara", "Miley Cyrus"],
+            "answer": 0
+        },
+        {
+            "question": "Which music group sang 'Incomplete' ",
+            "options": ["Westlife", "BackStreet Boys", "Boys II men", "Blue"],
+            "answer": 1
+        },
+        {
+            "question": "Which isn't a type of tooth in a human mouth",
+            "options": ["Incisor", "Canine", "Molar", "Cervical"],
+            "answer": 3
+        },
+        {
+            "question": "Where is Rihanna originally from",
+            "options": ["Mauritius", "Barbados", "Jamaica", "Cuba"],
+            "answer": 1 
+        },
+        {
+            "question": "Justin Timberlake is married to...",
+            "options": ["Amanda Seyfried", "Britney Spears", "Jessica Biel", "Cameron Diaz"],
+            "answer": 2
+        },
+        {
+            "question": "Beyonce was a member of which group",
+            "options": ["TLC", "Spice Girls", "Destiny's Child", "Little Mix"],
+            "answer": 2
+        },
+        {
+            "question": "What is the translation of the french word 'DONNER' ",
+            "options": ["To dare", "To take", "To borrow", "To give"],
+            "answer": 3
+        },
+        {
+            "question": "What is the SI unit of temperature",
+            "options": ["Celsius", "Fahrenheit", "Rankine", "Kelvin"],
+            "answer": 3
+        },
+        {
+            "question": "Human being biggest organ is ...",
+            "options": ["Skin", "Lungs", "Heart", "Kidney"],
+            "answer": 0
+        },
+        {
+            "question": "Which of this is not an operating sytem",
+            "options": ["Compaq", "Windows", "Linux", "Mac Os"],
+            "answer": 0
+        },
+        {
+            "question": "Which of this country is in Asia",
+            "options": ["Guyana", "Cambodia", "Monaco", "Sudan"],
+            "answer": 1
+        },
+        {
+            "question": "Which is not a romance language",
+            "options": ["Romanian", "Swedish", "Spanish", "Italian"],
+            "answer": 1
+        },
+        {
+            "question": "Which is not a virus",
+            "options": ["Covid-19", "Headache", "Ebola", "Cowpox"],
+            "answer": 1
+        }
+        
+    ],
+    "medium": [
+        {
+            "question": "From which language is the word ‘ketchup’ derived",
+            "options": ["English", "Chinese", "Italian", "Czech"],
+            "answer": 1
+        },
+        {
+            "question": "How many states make up the United States of America",
+            "options": ["50", "30", "60", "40"],
+            "answer": 0
+        },
+        {
+            "question": "Which German football team won the Champions League in 2013",
+            "options": ["Bayern Munich", "Dortmund", "Chelsea", "Barcelona"],
+            "answer": 0
+        },
+        {
+            "question": "Which English city is often abbreviated to Soton",
+            "options": ["Sunderland", "Southampton", "Sydney", "Luton"],
+            "answer": 1
+        },
+        {
+            "question": "Who was known as 'The Mad King' in Game Of Thrones",
+            "options": ["Robert Baratheon", "Khal Drogo", "Aerys Targaryen", "Joffrey Baratheon"],
+            "answer": 2
+        },
+        {
+            "question": "Arya Stark was helped to escape by who",
+            "options": ["A servant", "Tyrion Lannister", "Sansa Stark", "Joaqen H'ghar"],
+            "answer": 3
+        },
+        {
+            "question": "Which soft drinks company is the first to have ads featuring Santa",
+            "options": ["Coca-Cola", "Pepsi", "Mountain Dew", "Luton"],
+            "answer": 1
+        },
+        {  
+            "question": "Which US President was a former director of the CIA",
+            "options": ["Dwight Eisenhower", "Gerald Ford", "George Bush", "Lyndon Johnson"],
+            "answer": 2
+        },
+        {
+            "question": "In which region of atmosphere is the ozone layer",
+            "options": ["Troposphere", "Ionosphere", "Stratosphere", "Magnetosphere"],
+            "answer": 2
+        }
+    ],
+    "hard": [
+        {
+            "question": "Apart from womanizing and producing films, what was the other passion of Howard Hughes",
+            "options": ["Fishing", "Workout", "Swimming", "Aviation"],
+            "answer": 3
+        },
+        {
+            "question": "Complete the title of the play by Shakespeare – ‘The Merchant of …’",
+            "options": ["Rome", "London", "Venice", "Turin"],
+            "answer": 2
+        },
+        {
+            "question": "How is John Snow's direwolf called",
+            "options": ["Shaggydog", "Ghost", "Summer", "Nymeria"],
+            "answer": 1
+        },
+        {
+            "question": "Daenerys Targaryen's brother name was ...",
+            "options": ["Viserys", "Grenn", "Oberyn", "Varys"],
+            "answer": 0
+        },
+        {
+            "question": "What colour are mistletoe berries",
+            "options": ["Red", "White", "Blue", "Green"],
+            "answer": 1
+        },
+        {
+            "question": "Which rock star did Elvis Presley’s daughter marry",
+            "options": ["Chris Daugtry", "Linkin Park", "Michael Jackson", "Eminem"],
+            "answer": 2
+        },
+        {
+            "question": "Who was lead singer with the Supremes",
+            "options": ["Diana Ross", "Jennifer Lopez", "Celin Dion", "Ashante"],
+            "answer": 0
+        },
+        {
+            "question": "What was Walt Disney's first feature-length cartoon",
+            "options": ["Fantasia", "Pinocchio", "Snow White", "Bambi"],
+            "answer": 2
+        },
+        {
+            "question": "What was Walt Disney's first feature-length cartoon",
+            "options": ["Fantasia", "Pinocchio", "Snow White", "Bambi"],
+            "answer": 2
+        },
+        {
+            "question": "What was Walt Disney's first feature-length cartoon",
+            "options": ["Fantasia", "Pinocchio", "Snow White", "Bambi"],
+            "answer": 2
+        }
+    ]
+}
