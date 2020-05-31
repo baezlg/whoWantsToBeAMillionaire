@@ -3,94 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="author" content="Basil George">
+    <title>Who Wants To Be A Millionaire</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     
-    <div class="box">
-        <div class="start-box custom-box">
-            <div class="start-logo">
-                <img src="img/logo.png" alt="logo" class="start-img">
+    <main class="container">
+        <!-- Start Page -->
+        <section class="start-box custom">
+            <div class="game-logo">
+                <img src="img/logo.png" alt="logo">
             </div>
-            <div class="start-btn btn">Start Game</div>
-        </div>
-        <div class="game-box custom-box">
-            <div class="lifeTimer-box">
-                <div class="life-line">Life line</div>
+            <div class="instruction">
+                <h3>Instructions</h3>
+                <ul class="instruction-list">
+                    <li>30 seconds to answer each question</li>
+                    <li>Game over:
+                        <ul>
+                            <li>Time elapses</li>
+                            <li>Answer is wrong</li>
+                            <li>All questions have been answered</li>
+                        </ul>
+                    </li>
+                    <li>Guarantee prices at questions 1, 10, 15</li>
+                    <li>Wrong answer results in winning last quaranteed price</li>
+                    <li>Life lines
+                        <ul>
+                            <li>50:50 => Removes two wrong answers</li>
+                            <li>Ask the Audiences</li>
+                            <li>Call a friend</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="user-info">
+                <div class="start-game-btn btn">Start game</div>
+            </div>
+        </section>
+        <!-- Main Game Page -->
+        <section class="game-box custom">
+            <div class="game">
                 <div class="timer">15</div>
-            </div>
-            <div class="life-display-box">
-                <div class="call-box">
+                <div class="current-question-amount"></div>
+                <div class="life-line-display-box">
                     <div class="call">
                         <img src="img/call.png" alt="call">
-                        <div class="loading-dots">
-                            <div class="dot1"></div>
-                            <div class="dot2"></div>
-                            <div class="dot3"></div>
+                        <div class="call-answer"></div>
+                    </div>
+                    <div class="au-cover">
+                        <h4 class="alpha">ABCD</h4>
+                        <div class="au-container">
+                            <div class="au-box" id="0"><span></span><div class="bx"></div></div>
+                            <div class="au-box" id="1"><span></span><div class="bx"></div></div>
+                            <div class="au-box" id="2"><span></span><div class="bx"></div></div>
+                            <div class="au-box" id="3"><span></span><div class="bx"></div></div>
                         </div>
                     </div>
-                    <div class="answer">I think the answer is <span> A</span></div>
+                    <div class="amount-won"></div>
                 </div>
-                <div class="ask-box">
-                    <div class="optionAu">
-                        70%
-                        <div class="a"></div>
+                <div class="question-box">
+                    <div class="question">
+                        <div class="question-number"></div>
+                        <div class="question-text"></div>
                     </div>
-                    <div class="optionAu">
-                        10%
-                        <div class="b"></div>
+                    <div class="option-box">
+                        <div class="option" id="0" onclick="check(this)"><span class="span-o">A: </span><span class="opt"></span></div>
+                        <div class="option" id="1" onclick="check(this)"><span class="span-o">B: </span><span class="opt"></span></div>
+                        <div class="option" id="2" onclick="check(this)"><span class="span-o">C: </span><span class="opt"></span></div>
+                        <div class="option" id="3" onclick="check(this)"><span class="span-o">D: </span><span class="opt"></span></div>
                     </div>
-                    <div class="optionAu">
-                        8%
-                        <div class="c"></div>
+                    <div class="next-question">
+                        <button type="button" class="next-question-btn btn">Next Question</button>
+                        <button type="button" class="playAgain-btn btn">Play Again</button>
                     </div>
-                    <div class="optionAu">
-                        12%
-                        <div class="d"></div>
-                    </div>
-
                 </div>
             </div>
-            <div class="question-help">
-                <a href="javascript:void(0)" class="closebtn">&times;</a>
-                <div class="help">
-                    <div class="fify50"></div>
-                    <div class="callAFriend"></div>
-                    <div class="askTheAudience"></div>
+            <div class="side">
+                <div class="life-lines">
+                    <div class="fify50"><span class="cancel"></span></div>
+                    <div class="callAFriend"><span class="cancel"></span></div>
+                    <div class="askTheAudience"><span class="cancel"></span></div>
                 </div>
-                <div class="prices">
-                    <ul>
-                        <li>15 &#36;1 MILLION</li>
-                        <li>14 &#36;500,000</li>
-                        <li>13 &#36;250,000</li>
-                        <li>12 &#36;125,000</li>
-                        <li>11 &#36;64,000</li>
-                        <li>10 &#36;32,000</li>
-                        <li> 9 &#36;16,000</li>
-                        <li> 8 &#36;8,000</li>
-                        <li> 7 &#36;4,000</li>
-                        <li> 6 &#36;2,000</li>
-                        <li> 5 &#36;1,000</li>
-                        <li> 4 &#36;500</li>
-                        <li> 3 &#36;300</li>
-                        <li> 2 &#36;200</li>
-                        <li> 1 &#36;100</li>
-                    </ul>
+                <div class="price-box">
+                    <ol class="prices" reversed>
+                        <li><span>&#9671;</span>&#36;1 MILLION</li>
+                        <li><span>&#9671;</span>&#36;500,000</li>
+                        <li><span>&#9671;</span>&#36;250,000</li>
+                        <li><span>&#9671;</span>&#36;125,000</li>
+                        <li><span>&#9671;</span>&#36;64,000</li>
+                        <li><span>&#9671;</span>&#36;32,000</li>
+                        <li><span>&#9671;</span>&#36;16,000</li>
+                        <li><span>&#9671;</span>&#36;8,000</li>
+                        <li><span>&#9671;</span>&#36;4,000</li>
+                        <li><span>&#9671;</span>&#36;2,000</li>
+                        <li><span>&#9671;</span>&#36;1,000</li>
+                        <li><span>&#9671;</span>&#36;500</li>
+                        <li><span>&#9671;</span>&#36;300</li>
+                        <li><span>&#9671;</span>&#36;200</li>
+                        <li><span>&#9671;</span>&#36;100</li>
+                    </ol>
                 </div>
             </div>
-            <div class="question-box">Who is the current president of NigeriaWho is the current president of NigeriaWho is the current president of Nigeria</div>
-            <div class="options">
-                <div class="option option-btn"><span>A: </span>Olusegun Obansenjo</div>
-                <div class="option option-btn"><span>B: </span>Muhammed Buhari</div>
-                <div class="option option-btn"><span>C: </span>Nnamdi Azikuwe</div>
-                <div class="option option-btn"><span>D: </span>Donald Duke</div>
-            </div>
-        </div>
-        <div class="overview-box custom-box">
-
-        </div>
-    </div>
+        </section>
+    </main>
 
     <script src="script.js"></script>
 </body>
